@@ -46,6 +46,7 @@ import android.widget.Toast;
 
 public class SKYWebview extends WebView {
     private String key = "kr.co.earthcitizenclub";
+//    private String key = "sky.onispiano";
     //private String key = "kr.co.inergy.selftest";
     
     private ValueCallback<Uri> mUploadMessage;
@@ -389,6 +390,7 @@ public class SKYWebview extends WebView {
             Log.e("SKY", "overrideUrl :: " + overrideUrl);
             Message msg2 = SKYWebview.this.mAfter.obtainMessage();
             msg2.arg1 = 8001;
+            msg2.obj = ""+overrideUrl;
             SKYWebview.this.mAfter.sendMessage(msg2);
             if(overrideUrl.startsWith("https://www.facebook.com/dialog/return/close?#_=_")) {
                 Log.e("SKY", "back--");
@@ -458,6 +460,7 @@ public class SKYWebview extends WebView {
             super.onPageStarted(view, url, favicon);
             Message msg2 = SKYWebview.this.mAfter.obtainMessage();
             msg2.arg1 = 8002;
+            msg2.obj = ""+url;
             SKYWebview.this.mAfter.sendMessage(msg2);
         }
 
@@ -465,6 +468,7 @@ public class SKYWebview extends WebView {
             super.onPageFinished(view, url);
             Message msg2 = SKYWebview.this.mAfter.obtainMessage();
             msg2.arg1 = 8000;
+            msg2.obj = ""+url;
             SKYWebview.this.mAfter.sendMessage(msg2);
             Log.e("SKY", "onPageFinished = = = = = = = " + url);
         }

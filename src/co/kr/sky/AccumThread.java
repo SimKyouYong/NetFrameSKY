@@ -140,7 +140,7 @@ public class AccumThread extends Thread{
 		String packagename[] = {"co.kr.app.helloweurope" , "co.kr.sky.police" , "co.kr.massageguide","co.kr.sky.lms"
 				,"kr.pe.theeye.qrcode", "co.kr.sky.chachaman" , "co.kr.policeox" , "co.kr.sky.lms"
 				,"co.kr.sky.bluetooth","co.kr.sky.aiaqgold","co.kr.sky.boardlist" , "kr.co.cuppingproject"
-				,"co.kr.sky.kusa"};
+				,"co.kr.sky.kusa","sky.kr.co.hichina"};
 		/*
 		Boolean return_flag = false;
 		for (int i = 0; i < packagename.length; i++) {
@@ -155,7 +155,7 @@ public class AccumThread extends Thread{
 		}
 		 */
 		//snap40 : licence certi
-		String return_code = HttpPostCerti(packagename[12]);
+		String return_code = HttpPostCerti(packagename[13]);
 		Log.e("SKY" , "RETURN CODE :: " + return_code);
 
 
