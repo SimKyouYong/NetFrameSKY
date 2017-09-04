@@ -397,7 +397,10 @@ public class SKYWebview extends WebView {
                 view.goBackOrForward(-1);
                 SKYWebview.this.mainBody.removeView(SKYWebview.this.pWebView);
                 return true;
-            } else if(!overrideUrl.startsWith("intent") && !overrideUrl.startsWith("Intent")) {
+            }else if(overrideUrl.startsWith("com.eccb.17060501://")){		//지구 시민 클럽
+            	return true;
+            	
+            }else if(!overrideUrl.startsWith("intent") && !overrideUrl.startsWith("Intent")) {
                 if(overrideUrl.startsWith("js2ios://")) {
                     try {
                         Log.e("SKY", "shouldOverrideUrlLoading");
