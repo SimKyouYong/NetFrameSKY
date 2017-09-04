@@ -45,8 +45,8 @@ import android.widget.Toast;
 
 
 public class SKYWebview extends WebView {
-    private String key = "kr.co.earthcitizenclub";
-//    private String key = "sky.onispiano";
+//    private String key = "kr.co.earthcitizenclub";
+    private String key = "sky.onispiano";
     //private String key = "kr.co.inergy.selftest";
     
     private ValueCallback<Uri> mUploadMessage;
@@ -89,7 +89,7 @@ public class SKYWebview extends WebView {
         // TODO Auto-generated constructor stub
         cmx = context;
     	//getSettings().setUserAgentString("hybridweb_android");
-        getSettings().setCacheMode(WebSettings.LOAD_NO_CACHE);
+        //getSettings().setCacheMode(WebSettings.LOAD_NO_CACHE);
         getSettings().setJavaScriptEnabled(true);
         getSettings().setDomStorageEnabled(true);
         getSettings().setAppCacheEnabled(true);
@@ -209,7 +209,7 @@ public class SKYWebview extends WebView {
             //핸들러 반환
             Message msg2 = mAfter.obtainMessage();
             msg2.obj = mUploadMessage;
-            msg2.arg1 = 900;
+            msg2.arg1 = 300;
             mAfter.sendMessage(msg2);
 
             avx.startActivityForResult(Intent.createChooser(i, "파일 선택"), FILECHOOSER_RESULTCODE);
@@ -224,7 +224,7 @@ public class SKYWebview extends WebView {
             //핸들러 반환
             Message msg2 = mAfter.obtainMessage();
             msg2.obj = mUploadMessage;
-            msg2.arg1 = 900;
+            msg2.arg1 = 300;
             mAfter.sendMessage(msg2);
 
             avx.startActivityForResult(Intent.createChooser(i, "파일 선택"), FILECHOOSER_RESULTCODE);
@@ -239,7 +239,7 @@ public class SKYWebview extends WebView {
             //핸들러 반환
             Message msg2 = mAfter.obtainMessage();
             msg2.obj = mUploadMessage;
-            msg2.arg1 = 900;
+            msg2.arg1 = 300;
             mAfter.sendMessage(msg2);
 
             avx.startActivityForResult(Intent.createChooser(i, "파일 선택"), FILECHOOSER_RESULTCODE);
@@ -259,7 +259,7 @@ public class SKYWebview extends WebView {
             //핸들러 반환
             Message msg2 = mAfter.obtainMessage();
             msg2.obj = mFilePathCallback;
-            msg2.arg1 = 901;
+            msg2.arg1 = 301;
             mAfter.sendMessage(msg2);
 
             imageChooser();
