@@ -47,9 +47,9 @@ import android.widget.Toast;
 public class SKYWebview extends WebView {
     //private String key = "kr.co.earthcitizenclub";
     //private String key = "kr.com.earthcitizenclub";
-    private String key = "sky.kr.co.snuhlab";
+//    private String key = "sky.kr.co.snuhlab";
     
-//    private String key = "sky.onispiano";
+    private String key = "sky.onispiano";
     //private String key = "kr.co.inergy.selftest";
     
     private ValueCallback<Uri> mUploadMessage;
